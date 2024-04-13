@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.www.setmate" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SetMate</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+<icon src="res/iconbg.png"/>
+
+    <platform name="android">
+        
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/iconbg.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#7be495" />   
+
+        <preference name="FirebasePlugin" value="1:881886028562:android:1982444254c184fc5409cb" />
+        <preference name="FirebasePluginSenderId" value="881886028562" />
+        <preference name="FirebasePluginAPIKey" value="AIzaSyCzybji3fO-anvqyqiKMQO3TXl3l1GRBnw" />
+        
+        <preference name="Fullscreen" value="true"/>
+    </platform>
+</widget>

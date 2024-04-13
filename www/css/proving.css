@@ -1,0 +1,353 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('res/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    outline: none;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #56C596, #7be495);
+    overflow-y: auto;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+    justify-content: flex-start; /* Change to flex-start to align items to the left */
+    align-items: center;
+    top: 0;
+    left: 0; /* Change left to 0 to align the left edge of the navigation bar */
+    background-color: #56C596;
+    width: 100%;
+}
+
+.nav button {
+    margin: 10px;
+    padding: 10px;
+    color: #004d4d;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+}
+.nav .helpBtn{
+    margin: 10px;
+    padding: 10px;
+    color: #004d4d;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    position: absolute;
+    right: 0;
+}
+
+.title h1{
+    padding: 5px;
+    color: #004d4d;
+}
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.claim {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.claim h2 {
+    padding: 0px 10px;
+    color: #004d4d;
+}
+
+.problem-container {
+    padding: 10px;
+    color: #004d4d;
+}
+.problem-container h1{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #cff4d2;
+    border-radius: 20px;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.problem-container p{
+    padding-top: 10px;
+    text-align: center;
+}
+.first-part{
+    margin: 5px 15px 5px 15px;
+    padding-top: 10px;
+    border-top: 2px solid #cff4d2;
+    color: #004d4d;
+    font-size: 25px;
+}
+.solution-container{
+    display: block;
+    background-color: #cff4d2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: fit-content;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.solution-container p{
+    padding: 10px;
+}
+.solution{
+    display: flex;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.solution .show-lesson{
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center child elements */
+    justify-content: center;
+    margin: 10px;
+    color: #004d4d;
+    background: transparent;
+    border: none;
+    font-size: 30px
+}
+.solution .hide-lesson{
+    display: none; /* Use flexbox */
+    align-items: center; /* Vertically center child elements */
+    justify-content: center;
+    margin: 10px;
+    color: #004d4d;
+    background: transparent;
+    border: none;
+    font-size: 30px
+}
+
+.proof-solution,
+.just-solution {
+    flex: 1;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center child elements */
+}
+
+/* Additional styling for headings to ensure visibility */
+.proof-solution h4,
+.just-solution h4 {
+    color: #004d4d;
+    font-size: 16px;
+    margin: 10px;
+  
+}
+
+.just-solution{
+    font-size: 20px;
+}
+
+.proving{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    height: auto;
+}
+.proving input{
+    border-radius: 25px;
+    background: rgb(249, 250, 250);
+    border: #004d4d;
+    font-size: 16px;
+    width: 45%;
+    height: 40px;
+    line-height: 24px;
+    margin: 5px;
+    padding: 7px 8px;
+    color: rgb(8, 9, 10);
+    box-shadow: none;
+}
+.check-answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.check-answer button {
+    width: 150px;
+    background-color: #004d4d;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.keyboard-container {
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    overflow-y: auto;
+    z-index: 9999;
+    position: fixed; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.keyboard{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 10px;
+  }
+.btn{
+    width: 9%;
+    height: 5vh;
+    outline: none;
+    border: none;
+    background-color: #cff4d2;
+    border-radius: 5px;
+    color: #004d4d;
+    position: relative;
+    font-size: 20px;
+}
+.space{
+    width: 35%;
+}
+.bottom {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7be495; /* Adjust the background color if needed */
+    padding: 10px; /* Add padding for better visibility */
+    width: 100%; /* Ensure it spans the entire width */
+}
+
+.bottom button {
+    margin: 10px;
+    padding: 10px;
+    color: #004d4d;
+    border: none;
+    font-size: 35px;
+    background: transparent;
+}
+.popupsContainer {
+    position: fixed; /* Or 'absolute' if it better suits your layout */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Viewport width */
+    height: 100vh; /* Viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it is above other content */
+}
+.popup {
+    width: 400px;
+    background: #cff4d2;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #004d4d;
+    display: flex;
+    flex-direction: column; /* Added to make the button below the message */
+    align-items: center; 
+    visibility: hidden;
+    z-index: 9999999999;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup .choices{
+    display: flex; /* This will align children (h4) in a row */
+}
+.choices h4 {
+    display: inline-block;
+    width: 100px;
+    background-color: #004d4d;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 0;
+    margin: 40px 20px 0 20px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.choices .cancel{
+    background-color: #cb3635;
+}
+
+.checking {
+    width: 400px;
+    background: #cff4d2;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #004d4d;
+    display: flex;
+    flex-direction: column; /* Added to make the button below the message */
+    align-items: center; 
+    visibility: hidden;
+    z-index: 9999999999;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.checking img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checking h4 {
+    width: 100%;
+    background-color: #004d4d;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 50px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

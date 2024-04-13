@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://www.googleapis.com https://setmate-db-default-rtdb.asia-southeast1.firebasedatabase.app https://s-apse1a-nss-2008.asia-southeast1.firebasedatabase.app https://apis.google.com https://other-domain.com">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <link rel="stylesheet" href="css/proving.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.5.1-web/css/all.min.css">
+    <title>SetMate</title>
+</head>
+<body>
+
+    <div class="keyboard-container">
+        <div class="keyboard">
+           <div class="row">
+               <button class="btn">∪</button>
+               <button class="btn">∩</button>
+               <button class="btn">'</button>
+               <button class="btn">⊆</button>
+               <button class="btn">⊂</button>
+               <button class="btn">∅</button>
+               <button class="btn">∈</button>
+               <button class="btn">∉</button>
+               <button class="btn">\</button>
+               <button class="btn">x</button>
+           </div>
+           <div class="row">
+               <button class="btn">Q</button>
+               <button class="btn">W</button>
+               <button class="btn">E</button>
+               <button class="btn">R</button>
+               <button class="btn">T</button>
+               <button class="btn">Y</button>
+               <button class="btn">U</button>
+               <button class="btn">I</button>
+               <button class="btn">O</button>
+               <button class="btn">P</button>
+           </div>
+           <div class="row">
+               <button class="btn">-</button>
+               <button class="btn">A</button>
+               <button class="btn">S</button>
+               <button class="btn">D</button>
+               <button class="btn">F</button>
+               <button class="btn">G</button>
+               <button class="btn">H</button>
+               <button class="btn">J</button>
+               <button class="btn">K</button>
+               <button class="btn">L</button>
+           </div>
+           <div class="row">
+               <button class="btn">(</button>
+               <button class="btn">)</button>
+               <button class="btn">Z</button>
+               <button class="btn">X</button>
+               <button class="btn">C</button>
+               <button class="btn">V</button>
+               <button class="btn">B</button>
+               <button class="btn">N</button>
+               <button class="btn">M</button>
+               <button class="btn delete"><i class="fa-solid fa-delete-left"></i></button>
+           </div>
+           <div class="row">
+               <button class="btn">=</button>
+               <button class="btn">{</button>
+               <button class="btn">}</button>
+               <button class="btn space"> </button>
+               <button class="btn">[</button>
+               <button class="btn">]</button>
+               <button class="btn done"><i class="fa-solid fa-arrow-right"></i></button>
+           </div>
+       </div>
+   </div>
+    <div class="nav">
+        <button class="backBtn"><i class="fa-solid fa-arrow-left"></i></button>
+        <butto class="helpBtn"><i class="fa-solid fa-circle-question"></i></butto>
+    </div>
+    <div class="content">
+        <div class="claim">
+            <h2>Claim:</h2>
+            <div class="problem-container"></div>
+            <div class="first-part"></div>
+            <div class="proving">
+                <input type="text" placeholder="Proof..." readonly class="proof">
+                <input type="text" placeholder="Justification..." readonly class="just">
+            </div>
+            <div class="check-answer">
+                <button class="check-answer">Check Answer</button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <button class="show-answers"><i class="fa-solid fa-lightbulb"></i></button>
+    </div>
+    <div class="popupsContainer">
+        <div class="popup">
+            <img src="img/warning.png" alt="">
+            <h2>Are you sure you want to reveal the answers?</h2>
+            <p>Press yes to see the answer.</p>
+            <div class="choices">
+                <h4 class="yes">Yes</h4>
+                <h4 class="cancel">Cancel</h4>
+            </div>
+        </div>
+        <div class="checking bothNull">
+            <img src="img/warning.png" alt="">
+            <h2>Both fields are empty.</h2>
+            <p>Press okay to continue answering.</p>
+            <h4 class="okay">Okay</h4>
+        </div>
+        <div class="checking proofNull">
+            <img src="img/warning.png" alt="">
+            <h2>Proof field is empty.</h2>
+            <p>Press okay to continue answering.</p>
+            <h4 class="okay">Okay</h4>
+        </div>
+        <div class="checking justNull">
+            <img src="img/warning.png" alt="">
+            <h2>Justification field is empty.</h2>
+            <p>Press okay to continue answering.</p>
+            <h4 class="okay">Okay</h4>
+        </div>
+        <div class="checking proofMatch">
+            <img src="img/warning.png" alt="">
+            <h2>Proof is correct but, the justification used is incorrect.</h2>
+            <p>Press okay to continue answering.</p>
+            <h4 class="okay">Okay</h4>
+        </div>
+        <div class="checking justAndNeither">
+            <img src="img/warning.png" alt="">
+            <h2>It seems like there's a mistake in your answer. Can you try again?</h2>
+            <p>Press okay to continue answering.</p>
+            <h4 class="okay">Okay</h4>
+        </div>    
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="module" src="js/proving.js"></script>  
+</body>
+</html>

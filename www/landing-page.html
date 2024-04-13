@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://www.googleapis.com https://setmate-db-default-rtdb.asia-southeast1.firebasedatabase.app https://s-apse1a-nss-2008.asia-southeast1.firebasedatabase.app https://apis.google.com https://other-domain.com https://cdnjs.cloudflare.com https://polyfill.io https://cdn.jsdelivr.net">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <link rel="stylesheet" href="css/landing-page.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+
+    <title>SetMate</title>
+</head>
+<body>
+
+    <div class="keyboard-container">
+         <div class="keyboard">
+            <div class="row">
+                <button class="btn">∪</button>
+                <button class="btn">∩</button>
+                <button class="btn">'</button>
+                <button class="btn">⊆</button>
+                <button class="btn">⊂</button>
+                <button class="btn">∅</button>
+                <button class="btn">∈</button>
+                <button class="btn">∉</button>
+                <button class="btn">\</button>
+                <button class="btn">x</button>
+            </div>
+            <div class="row">
+                <button class="btn">Q</button>
+                <button class="btn">W</button>
+                <button class="btn">E</button>
+                <button class="btn">R</button>
+                <button class="btn">T</button>
+                <button class="btn">Y</button>
+                <button class="btn">U</button>
+                <button class="btn">I</button>
+                <button class="btn">O</button>
+                <button class="btn">P</button>
+            </div>
+            <div class="row">
+                <button class="btn">-</button>
+                <button class="btn">A</button>
+                <button class="btn">S</button>
+                <button class="btn">D</button>
+                <button class="btn">F</button>
+                <button class="btn">G</button>
+                <button class="btn">H</button>
+                <button class="btn">J</button>
+                <button class="btn">K</button>
+                <button class="btn">L</button>
+            </div>
+            <div class="row">
+                <button class="btn">(</button>
+                <button class="btn">)</button>
+                <button class="btn">Z</button>
+                <button class="btn">X</button>
+                <button class="btn">C</button>
+                <button class="btn">V</button>
+                <button class="btn">B</button>
+                <button class="btn">N</button>
+                <button class="btn">M</button>
+                <button class="btn delete"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+            <div class="row">
+                <button class="btn">=</button>
+                <button class="btn">{</button>
+                <button class="btn">}</button>
+                <button class="btn space"> </button>
+                <button class="btn">[</button>
+                <button class="btn">]</button>
+                <button class="btn done"><i class="fa-solid fa-check"></i></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="upper-right">
+        <button class="help-btn"><i class="fa-solid fa-circle-question"></i></button>
+    </div>
+
+    <div class="bottom">
+        <div class="historyBtn"><i class="fa-solid fa-clock-rotate-left"></i></div>
+    </div>    
+    
+    <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="content-container">
+        <img src="img/Hello-SetMate.gif" >
+        <img id="doneImage" src="" style="display:none;" />
+        <div class="input-container">
+            <input type="text" placeholder="Type problem here..." readonly class="text-area" id="input">
+            <button class="camera-btn"><i class="fa-solid fa-camera"></i></button>
+        </div>
+    </div>
+    
+    <div class="side-bar">
+        <header>
+         <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+         </div>
+         <div class="logo">
+         </div>
+        </header>
+
+        <div class="menu">
+            <div class="item">
+                <a href=""><i class="fa-solid fa-circle-question"></i> Help Center</a>
+            </div>
+            <div class="item">
+                <a href="aboutUs.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            </div>
+            <div class="item signOut">
+                <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i></i> Sign Out</a>
+            </div>
+        </div>
+    </div>
+    <div class="popupsContainer">
+        <div class="popup">
+            <img src="img/tick.png" alt="">
+            <h2>Problem Found!</h2>
+            <p>Press continue to start proving.</p>
+            <h4 class="continue">Continue</h4>
+        </div>
+        <div class="problemNotFound">
+            <img src="img/x.png" alt="">
+            <h2>Problem Not Found!</h2>
+            <p>Either problem is not yet learned or invalid claim.</p>
+            <h4 class="edit">Edit Claim</h4>
+        </div>    
+    </div>
+    
+    <div class="history-tab">
+        <div class="history-content">
+            <div class="close-history">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <h1>History</h1>
+            <ul class="history-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="help-tab">
+        <div class="help-content">
+            <header>
+                <div class="close-help">
+                   <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="logo">
+                   <img src="img/icon.png" alt="">
+                   <h1>Help</h1>
+                </div>
+               </header>
+        </div>
+    </div>
+
+    <div class="image-container" id="imageContainer">
+        <img id="image" src="" style="display:none;" />
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"></script>
+    <script type="module" src="js/landing-page.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>    
+</body>
+</html>
